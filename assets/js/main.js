@@ -105,7 +105,7 @@ const projectsData = [
     academicImpact: "Projek Tugas Akhir / Skripsi yang dipublikasikan dalam Jurnal Ilmiah Sistem Informasi (JSII) Universitas Serang Raya bersama dosen pembimbing.",
     docUrl: "assets/docs/jurnal_jsii_ahmad_fauzan.docx",
     pdfReportUrl: "assets/docs/laporan_penjualan_februari_maret_2026.pdf",
-    githubUrl: "https://github.com/ahmdfauzann",
+    githubUrl: "https://github.com/ahmdfauzann/apkskripsi-zahkreasi",
     liveUrl: "#"
   },
   {
@@ -152,7 +152,7 @@ const projectsData = [
     techStack: ["PHP Native (MySQLi)", "MySQL", "Bootstrap 3", "JavaScript", "HTML5 & CSS3"],
     academicImpact: "Implementasi langsung pada lingkungan kerja operasional Radio Mandiri FM Cilegon sebagai laporan resmi Kerja Praktek (KKP) Sistem Informasi.",
     docUrl: null,
-    githubUrl: "https://github.com/ahmdfauzann",
+    githubUrl: "https://github.com/ahmdfauzann/absensi-mandirifm",
     liveUrl: "#"
   }
 ];
