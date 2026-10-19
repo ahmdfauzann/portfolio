@@ -128,3 +128,139 @@ code, pre, .font-mono {
 .animate-pulse-glow {
   animation: pulseGlow 2s infinite ease-in-out;
 }
+
+/* =========================================================
+   Light Theme Comprehensive Styles
+   ========================================================= */
+html:not(.dark) body,
+html.light body {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Glass & Navigation */
+html:not(.dark) .glass,
+html.light .glass {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Background elements */
+html:not(.dark) .bg-slate-950,
+html.light .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+html:not(.dark) .bg-slate-900,
+html.light .bg-slate-900 {
+  background-color: #f1f5f9 !important;
+}
+
+html:not(.dark) .bg-slate-900\/90,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/40,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/40 {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-800\/60,
+html:not(.dark) .bg-slate-800\/80,
+html.light .bg-slate-800,
+html.light .bg-slate-800\/60,
+html.light .bg-slate-800\/80 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Borders */
+html:not(.dark) .border-slate-800,
+html:not(.dark) .border-slate-800\/80,
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-700\/60,
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-700,
+html.light .border-slate-700\/60 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text Colors */
+html:not(.dark) .text-white,
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300,
+html.light .text-slate-100,
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-400,
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Card hover and shadows in light mode */
+html:not(.dark) .card-hover,
+html.light .card-hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02) !important;
+}
+
+html:not(.dark) .card-hover:hover,
+html.light .card-hover:hover {
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08), 0 10px 15px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Inputs in light mode */
+html:not(.dark) input,
+html:not(.dark) textarea,
+html.light input,
+html.light textarea {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder,
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Scrollbar for light mode */
+html:not(.dark) ::-webkit-scrollbar-track,
+html.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb,
+html.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* Ambient glow subtle adjustment in light mode */
+html:not(.dark) .bg-blue-600\/15,
+html.light .bg-blue-600\/15 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+html:not(.dark) .bg-purple-600\/10,
+html.light .bg-purple-600\/10 {
+  background-color: rgba(147, 51, 234, 0.05) !important;
+}
+html:not(.dark) .bg-sky-500\/10,
+html.light .bg-sky-500\/10 {
+  background-color: rgba(14, 165, 233, 0.05) !important;
+}

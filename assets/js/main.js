@@ -117,7 +117,7 @@ function renderProjects(category = "all") {
     : projectsData.filter(p => p.category === category);
 
   container.innerHTML = filtered.map(p => `
-    <div class="group relative bg-slate-900/90 dark:bg-slate-900/90 light:bg-white border border-slate-800 dark:border-slate-800 light:border-slate-200 rounded-3xl p-7 shadow-xl card-hover flex flex-col justify-between transition-all duration-300">
+    <div class="group relative bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-3xl p-7 shadow-xl card-hover flex flex-col justify-between transition-all duration-300">
       
       <!-- Top Card Header: Repo Badge & Category -->
       <div>
@@ -127,37 +127,37 @@ function renderProjects(category = "all") {
               <i class="${p.icon}"></i>
             </div>
             <div>
-              <span class="text-xs font-mono font-bold text-slate-400 block">${p.categoryLabel}</span>
+              <span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 block">${p.categoryLabel}</span>
               <span class="px-2 py-0.5 text-[11px] font-semibold rounded-md border ${p.badgeColor} inline-block mt-0.5">
                 ${p.badge}
               </span>
             </div>
           </div>
 
-          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" title="Buka di GitHub" class="w-10 h-10 rounded-2xl bg-slate-800 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition-all border border-slate-700/80 shadow-md">
+          <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" title="Buka di GitHub" class="w-10 h-10 rounded-2xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-600 text-slate-700 dark:text-slate-300 hover:text-white dark:hover:text-white flex items-center justify-center transition-all border border-slate-200 dark:border-slate-700/80 shadow-sm">
             <i class="fa-brands fa-github text-lg"></i>
           </a>
         </div>
 
         <!-- Project Title -->
         <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="block group/link">
-          <h3 class="text-xl font-extrabold text-white dark:text-white light:text-slate-900 group-hover/link:text-blue-400 transition-colors leading-snug">
+          <h3 class="text-xl font-extrabold text-slate-900 dark:text-white group-hover/link:text-blue-500 dark:group-hover/link:text-blue-400 transition-colors leading-snug">
             ${p.title}
           </h3>
         </a>
 
         <!-- Description -->
-        <p class="mt-3 text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">
+        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
           ${p.shortDesc}
         </p>
 
         <!-- Direct GitHub Link Box -->
-        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="mt-5 p-3 rounded-2xl bg-slate-950/80 hover:bg-slate-950 border border-slate-800 hover:border-blue-500/50 flex items-center justify-between gap-2 text-xs font-mono text-slate-300 transition-all group/repo">
+        <a href="${p.githubUrl}" target="_blank" rel="noopener noreferrer" class="mt-5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-950/80 hover:bg-slate-100 dark:hover:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-500/50 flex items-center justify-between gap-2 text-xs font-mono text-slate-700 dark:text-slate-300 transition-all group/repo">
           <div class="flex items-center gap-2 truncate">
-            <i class="fa-brands fa-github text-blue-400 text-sm flex-shrink-0"></i>
-            <span class="truncate text-slate-300 group-hover/repo:text-blue-300">${p.repoName}</span>
+            <i class="fa-brands fa-github text-blue-500 dark:text-blue-400 text-sm flex-shrink-0"></i>
+            <span class="truncate text-slate-700 dark:text-slate-300 group-hover/repo:text-blue-600 dark:group-hover/repo:text-blue-300">${p.repoName}</span>
           </div>
-          <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 font-bold uppercase tracking-wider flex-shrink-0 flex items-center gap-1">
+          <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold uppercase tracking-wider flex-shrink-0 flex items-center gap-1">
             <span>Repo</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
           </span>
@@ -165,11 +165,11 @@ function renderProjects(category = "all") {
       </div>
 
       <!-- Bottom Card Section: Tech Tags & Action Button -->
-      <div class="mt-6 pt-5 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200">
+      <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800/80">
         <!-- Tech Stack Tags -->
         <div class="flex flex-wrap gap-1.5 mb-5">
           ${p.techStack.map(t => `
-            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-800 text-slate-300 dark:bg-slate-800 dark:text-slate-300 light:bg-slate-100 light:text-slate-700">
+            <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-transparent">
               ${t}
             </span>
           `).join('')}
@@ -184,7 +184,7 @@ function renderProjects(category = "all") {
           </a>
 
           ${p.docUrl ? `
-            <a href="${p.docUrl}" download title="Unduh Naskah Jurnal JSII (.docx)" class="py-3 px-3.5 rounded-xl bg-slate-800 hover:bg-emerald-600/20 text-emerald-400 border border-slate-700 hover:border-emerald-500/50 transition-colors" title="Unduh Jurnal Skripsi">
+            <a href="${p.docUrl}" download title="Unduh Naskah Jurnal JSII (.docx)" class="py-3 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600/20 text-emerald-600 dark:text-emerald-400 border border-slate-200 dark:border-slate-700 hover:border-emerald-500/50 transition-colors" title="Unduh Jurnal Skripsi">
               <i class="fa-solid fa-file-arrow-down text-sm"></i>
             </a>
           ` : ''}
@@ -266,7 +266,7 @@ function initContactForm() {
     const subject = encodeURIComponent(`Pesan Portofolio dari ${name}`);
     const body = encodeURIComponent(`Halo Ahmad Fauzan,\n\nNama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`);
     
-    window.location.href = `mailto:ahmadfauzan@unsera.ac.id?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:fauzan.ahmmd@gmail.com?subject=${subject}&body=${body}`;
 
     if (toast) {
       toast.classList.remove("hidden");
